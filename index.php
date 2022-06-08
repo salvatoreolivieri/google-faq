@@ -247,6 +247,10 @@ $faq = [
     color: var(--grey-color);
   }
 
+  a:hover{
+    color: var(--blue-color);
+  }
+
   .active{
     color: var(--blue-color);
     opacity: 1;
