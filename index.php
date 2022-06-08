@@ -82,7 +82,125 @@ $faq = [
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+  :root{
+    --grey-color: #5f6368;
+    --light-grey-color: rgba(60,64,67,.08);
+    --blue-color: #2973E7
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  header{
+    position: fixed;
+    z-index: 9999;
+    background-color: white;
+    width: 100%;
+
+    border-bottom: 1px solid #dee2e6;
+
+  }
+
+  .header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 80px;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+
+  .header-bottom{
+    padding: 0 20px;
+  }
+
+  .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .img-container{
+    width: 90px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  img{
+    width: 90%
+  }
+
+  span{
+    Font-size: 22px;
+    letter-spacing: 0.5px;
+    color: var(--grey-color);
+    opacity: 0.9;
+
+  }
+
+  button{
+    padding: 10px 25px;
+    background-color: var(--blue-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: lighter;
+    letter-spacing: 0.5px;
+    margin:0 20px;
+    cursor: pointer;
+  }
+
+  .circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+  }
+
+  .circle:hover{
+    background-color: var(--light-grey-color);
+  }
+
+  ul{
+    display: flex;
+  }
+
+  li{
+    list-style: none;
+    margin-right: 40px;
+    opacity: 0.9;
+    margin-bottom: 10px;
+
+  }
+
+  a{
+    text-decoration: none;
+    color: var(--grey-color);
+  }
+
+  .active{
+    color: var(--blue-color);
+    opacity: 1;
+    padding-bottom: 9px;
+    border-bottom: 3px solid var(--blue-color);
+  }
+
+  </style>
+
   <title>Google FAQ</title>
 </head>
 <body>
@@ -91,16 +209,51 @@ $faq = [
 
   <div class="header-top">
 
+    <div class="container">
+
+      <div class="img-container">
+        <img src="media/google_logo.png" alt="">
+      </div>
+  
+      <span>Privacy e termini</span>
+
+    </div>
+
+    <div class="container">
+
+      <div class="circle">
+        <img style="width: 20px;" src="media/grid-dot.jpg" alt="">
+      </div>
+
+      <div>
+        <button>Accedi</button>
+      </div>
+
+      <div class="img-container">
+        <img style="width: 40px; border-radius: 50px;" src="media/me.JPG" alt="">
+      </div>
+
+    </div>
+
+
   </div>
 
   <div class="header-bottom">
-
+      <nav>
+        <ul>
+          <li><a href="#">Introduzione</a></li>
+          <li><a href="#">Norme sulla privacy</a></li>
+          <li><a href="#">Termini di servizio</a></li>
+          <li><a href="#">Tecnologie</a></li>
+          <li><a class="active" href="#">Domande frequenti</a></li>
+        </ul>
+      </nav>
   </div>
 
 </header>
 
 <main>
-
+  
 </main>
   
 </body>
